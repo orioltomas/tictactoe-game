@@ -1,0 +1,60 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <title>TIC TAC TOE</title>
+    </head>
+    <body>
+        <div class="game-container">
+            <h1 class="headline">
+                <span class="tic">TIC</span> 
+                <span class="tac">TAC</span> 
+                <span class="TOE">TOE</span> 
+                <span class="GAME">GAME</span></h1>
+            <div class="score">
+                Wins by X: <span class="score-x">0</span>
+                Wins by O: <span class="score-o">0</span>
+                Draws: <span class="score-draw">0</span>
+            </div>
+            <div class="turn">X starts playing</div>
+            <div class="board-wrapper">
+                <h1 class="winner"></h1>
+                <div class="board">
+                    <div class="board-row">
+                        <div class="position" data-position="0"></div>
+                        <div class="position" data-position="1"></div>
+                        <div class="position" data-position="2"></div>
+                    </div>
+                    <div class="board-row">
+                        <div class="position" data-position="3"></div>
+                        <div class="position" data-position="4"></div>
+                        <div class="position" data-position="5"></div>
+                    </div>
+                    <div class="board-row">
+                        <div class="position" data-position="6"></div>
+                        <div class="position" data-position="7"></div>
+                        <div class="position" data-position="8"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="reset-btn">NEXT ROUND</div>
+            <div class="icon-prototypes">
+                <div class="cross">
+                    <span class="cross-left"></span>
+                    <span class="cross-right-first"></span>
+                    <span class="cross-right-second"></span>
+                </div>
+                <div class="circle">
+                    <span class="circle-left"></span>
+                    <span class="circle-right"></span>
+                </div>
+            </div>
+        </div>
+
+        <script src="./game.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>

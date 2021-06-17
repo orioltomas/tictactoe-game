@@ -1,0 +1,281 @@
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(19, 18, 37);
+}
+.game-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.headline {
+    font-weight: 100;
+    color: white;
+    text-align: center;
+}
+.tic {
+    position: relative;
+    animation: changeTic 2s infinite alternate;
+}
+@keyframes changeTic {
+    from {
+        opacity: 0;
+        left: -30px;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+.tac {
+    position: relative;
+    animation: changeTac 2s infinite alternate;
+}
+@keyframes changeTac {
+    from {
+        opacity: 0;
+        top: -30px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+.toe {
+    position: relative;
+    animation: changeToe 2s infinite alternate;
+}
+@keyframes changeToe {
+    from {
+        opacity: 0;
+        top: 30px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+.score {
+    padding-top: 40px;
+    color: white;
+    text-align: center;
+}
+.score span:not(:last-of-type):after {
+    content: '|';
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.game {
+    position: relative;
+    animation: changeGame 2s infinite alternate;
+}
+@keyframes changeGame {
+    from {
+        opacity: 0;
+        right: -30px;
+    }
+    to {
+        opacity: 1;
+        right: 0;
+    }
+}
+.turn {
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.turn.hide {
+    display: none;
+}
+.winner {
+    display: none;
+    width: 100%;
+    margin: 25px 0 0;
+    padding: 15px 0;
+    background: linear-gradient(0.25turn, transparent, rgb(0,128,0), transparent);
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+.winner.show {
+    display: block;
+}
+.board {
+    width: fit-content;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+.board-row {
+    width: fit-content;
+    display: flex;
+}
+.board-row:nth-of-type(1) {
+    position: relative;
+    top: 1px;
+}
+.board-row:nth-of-type(3) {
+    position: relative;
+    top: -1px;
+}
+.position {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.position:nth-of-type(1) {
+    position: relative;
+    left: 1px;
+}
+.position:nth-of-type(3) {
+    position: relative;
+    left: -1px;
+}
+.position:hover {
+    cursor: pointer;
+    background-color: rgb(43, 41, 70);
+}
+.icon-prototypes {
+    display: none;
+}
+.cross {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+span.cross-left {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: white;
+    animation: showCrossLeft .5s 1 forwards;
+}
+@keyframes showCrossLeft {
+    from {
+        opacity: 0;
+        top: 0;
+        left: -15px;
+    }
+    to {
+        opacity: 1;
+        top: 50%;
+        left: 0;
+    }
+}
+span.cross-right-first {
+    opacity: 0;
+    position: absolute;
+    width: calc(50% - 5px);
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: white;
+    animation: showCrossRightFirst .5s .25s 1 forwards;
+}
+@keyframes showCrossRightFirst {
+    from {
+        opacity: 0;
+        top: -3px;
+        right: -10px;
+    }
+    to {
+        opacity: 1;
+        top: 12px;
+        right: 3px;
+    }
+}
+span.cross-right-second {
+    opacity: 0;
+    position: absolute;
+    width: calc(50% - 5px);
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: white;
+    animation: showCrossRightSecond .5s .25s 1 forwards;
+}
+@keyframes showCrossRightSecond {
+    from {
+        opacity: 0;
+        bottom: -3px;
+        left: -10px;
+    }
+    to {
+        opacity: 1;
+        bottom: 12px;
+        left: 3px;
+    }
+}
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+span.circle-left {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border: 2px solid white;
+    border-right: 0;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    animation: showCircleLeft .5s 1 forwards;
+}
+@keyframes showCircleLeft {
+    from {
+        opacity: 0;
+        left: -20px;
+    }
+    to {
+        opacity: 1;
+        left: -5px;
+    }
+}
+span.circle-right {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    border: 2px solid white;
+    border-left: 0;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    animation: showCircleRight .5s 1 forwards;
+}
+@keyframes showCircleRight {
+    from {
+        opacity: 0;
+        right: -20px;
+    }
+    to {
+        opacity: 1;
+        right: -5px;
+    }
+}
+.reset-btn {
+    display: none;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 10px 15px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 0px 0px 0px white;
+    text-transform: uppercase;
+}
+.reset-btn.show {
+    display: block;
+}
+.reset-btn:hover {
+    cursor: pointer;
+    transform: translate(5px, -5px);
+    box-shadow: -5px 5px 0px 0px white;
+}
