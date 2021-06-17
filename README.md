@@ -21,6 +21,6 @@ DRAW: The same player who started the actual round will start next round.
 
 <h3>How to play:</h3>
 
-- Download the application code
-- Open the folder that contains the application in your computer
-- Open the <i>index.html</i> file in your favorite explorer and try it out
+1. Download the application code.
+2. Open the folder that contains the application in your computer.
+3. Open the <i>index.html</i> file in your favorite explorer and try it out.
