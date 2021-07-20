@@ -16,18 +16,17 @@ function handleGameEnd(type) {
         gameEndText = "It's a draw";
         game.updateDraw();
     }
-    const winnerElement = document.querySelector(".winner");
-    winnerElement.innerHTML = gameEndText;
-    winnerElement.classList.add("show");
+    const endGameContainerElement = document.querySelector(".end-game-container");
+    endGameContainerElement.querySelector('.winner').innerHTML = gameEndText;
+    endGameContainerElement.classList.add("show");
     document.querySelector(".reset-btn").classList.add("show");
-    document.querySelector(".turn").classList.add("hide");
+    document.querySelector(".turn").innerHTML = "END GAME";
 }
 
 function handleResetGame() {
     game.resetGame();
-    document.querySelector(".winner").classList.remove("show");
+    document.querySelector(".end-game-container").classList.remove("show");
     document.querySelector(".reset-btn").classList.remove("show");
-    document.querySelector(".turn").classList.remove("hide");
 }
 
 function handlePositionClicked (event) {

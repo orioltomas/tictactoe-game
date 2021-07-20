@@ -8,6 +8,16 @@
         <title>Tic Tac Toe Game</title>
     </head>
     <body>
+        <div class="end-game-container">
+            <div class="end-game-content">
+                <h1 class="winner"></h1>
+                <div class="reset-btn">
+                    <span></span>
+                    <span></span>
+                    PLAY AGAIN
+                </div>
+            </div>
+        </div>
         <div class="game-container">
             <h1 class="headline">
                 <span class="tic">TIC</span> 
@@ -15,13 +25,12 @@
                 <span class="TOE">TOE</span> 
                 <span class="GAME">GAME</span></h1>
             <div class="score">
-                Wins by X: <span class="score-x">0</span>
-                Wins by O: <span class="score-o">0</span>
-                Draws: <span class="score-draw">0</span>
+                X wins : <span class="score-x">0</span>
+                O wins : <span class="score-o">0</span>
+                Draws : <span class="score-draw">0</span>
             </div>
             <div class="turn">X starts playing</div>
-            <div class="board-wrapper">
-                <h1 class="winner"></h1>
+            <div class="board-container">
                 <div class="board">
                     <div class="board-row">
                         <div class="position" data-position="0"></div>
@@ -40,7 +49,6 @@
                     </div>
                 </div>
             </div>
-            <div class="reset-btn">NEXT ROUND</div>
             <div class="icon-prototypes">
                 <div class="cross">
                     <span class="cross-left"></span>
